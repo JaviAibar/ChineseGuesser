@@ -6,7 +6,6 @@ using UnityEngine;
 public class ScriptableObjectLevel : ScriptableObject
 {
     public int levelId;
-    public string levelName;
     public Sprite picture;
     [MultilineAttribute]
     public string description;

@@ -437,6 +437,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelsGrid: {fileID: 546117296}
   levelButtonPrefab: {fileID: 3971517836042375011, guid: e34ec192d783aba4a90b13172cb37e5d, type: 3}
+  totalLevels: 16
+  table:
+    m_TableReference:
+      m_TableCollectionName: GUID:9b8130745df2cc24db7f17f60419f470
 --- !u!4 &979035423
 Transform:
   m_ObjectHideFlags: 0

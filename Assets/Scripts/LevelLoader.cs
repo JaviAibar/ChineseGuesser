@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,13 +12,18 @@ public class LevelLoader : MonoBehaviour
     public Image picture;
     public Image mask;
     public Text description;
-    public Text title;
+   // public Text title;
     public float timer;
     public float speed = 2;
     private Material blurImage;
     private Material blurMask;
     public Text solution;
-
+    public LocalizeStringEvent title;
+    private void Awake()
+    {
+        CheckLevelNull();
+        print(title);
+    }
     void Start()
     {
         LoadLevel();
@@ -27,20 +33,21 @@ public class LevelLoader : MonoBehaviour
     {
         solution.transform.parent.gameObject.SetActive(false);
         print(LocalizationSettings.SelectedLocale.Formatter);
-        if (currentLevel == null) currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level 001");
         print(currentLevel);
         print(currentLevel.description);
         description.text = currentLevel.description;
         picture.sprite = currentLevel.picture;
-        title.text = currentLevel.levelName;
         solution.text = currentLevel.solution;
-        timer = 30;
+        timer = 60;
         SetRadius();
     }
 
     public void NextLevel()
     {
-        currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
+        CheckLevelNull();
+        currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
+        print("2" + title);
+        title.StringReference.RefreshString();
         print("Trying to load " + LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
         LoadLevel();
     }
@@ -76,5 +83,10 @@ public class LevelLoader : MonoBehaviour
     {
         picture.material.SetFloat("_Radius", timer);
         mask.material.SetFloat("_Radius", timer);
+    }
+
+    void CheckLevelNull()
+    {
+        if (currentLevel == null) currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level 001");
     }
 }

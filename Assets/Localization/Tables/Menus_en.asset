@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 9b8130745df2cc24db7f17f60419f470, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3338760960540672001
   m_TableData:
   - m_Id: 2059083816960
     m_Localized: Levels
@@ -38,6 +39,19 @@ MonoBehaviour:
     m_Localized: Next
     m_Metadata:
       m_Items: []
+  - m_Id: 226342892576768
+    m_Localized: Level {levelLoader.currentLevel.levelId}
+    m_Metadata:
+      m_Items:
+      - rid: 3338760960540672001
+  - m_Id: 242440820072448
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3338760960540672001
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00a0b58fdbcd0000

@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        LevelLoader.currentLevel = (ScriptableObjectLevel) Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level 001");
         SceneManager.LoadScene("Level");
     }
 
