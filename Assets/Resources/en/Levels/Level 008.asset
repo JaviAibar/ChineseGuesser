@@ -15,5 +15,5 @@ MonoBehaviour:
   levelId: 8
   levelName: Level 8
   picture: {fileID: 21300000, guid: aaedf0b735d5f3c4c9107b9af98ba036, type: 3}
-  description: 
+  description: a
   solution: Speak

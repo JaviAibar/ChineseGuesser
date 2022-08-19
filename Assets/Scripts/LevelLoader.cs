@@ -40,7 +40,8 @@ public class LevelLoader : MonoBehaviour
 
     public void NextLevel()
     {
-        currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + (currentLevel.levelId + 1));
+        currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
+        print("Trying to load " + LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
         LoadLevel();
     }
 

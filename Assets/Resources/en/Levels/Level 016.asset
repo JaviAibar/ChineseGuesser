@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 16
+  m_Name: Level 016
   m_EditorClassIdentifier: 
   levelId: 16
   levelName: Level 16
   picture: {fileID: 21300000, guid: 61ab1964790d16d4a8cee4cbeb3b8099, type: 3}
-  descrition: "Lose and Foot\n\u5931\u8DB3\nsh\u012B z\xFA"
+  description: a
   solution: Stumble

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 5
+  m_Name: Level 005
   m_EditorClassIdentifier: 
   levelId: 5
-  levelName: Level 5
+  levelName: Nivel 5
   picture: {fileID: 21300000, guid: 2e722a66a2807c244896d86105c6bbe7, type: 3}
-  descrition: "Mouth and Water\n\u53E3\u6C34\nk\u01D2u shu\u01D0"
+  description: "Boca y Agua\n\u53E3\u6C34\nk\u01D2u shu\u01D0"
   solution: Saliva

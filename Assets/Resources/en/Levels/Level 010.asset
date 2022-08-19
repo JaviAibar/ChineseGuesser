@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 10
+  m_Name: Level 010
   m_EditorClassIdentifier: 
   levelId: 10
   levelName: Level 10
   picture: {fileID: 21300000, guid: 8c7cb7a7c0458d44b8558eab02397f09, type: 3}
-  descrition: "Electricity and Car\n\u7535\u8F66\ndi\xE0n ch\u0113"
+  description: a
   solution: "Tranv\xEDa"

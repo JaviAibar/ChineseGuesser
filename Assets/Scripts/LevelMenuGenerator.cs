@@ -12,7 +12,7 @@ public class LevelMenuGenerator : MonoBehaviour
     public GameObject levelButtonPrefab;
     private void Start()
     {
-        DirectoryInfo info = new DirectoryInfo("Assets/Resources/en/Levels");
+        DirectoryInfo info = new DirectoryInfo("Resources/en/Levels");
         var fileInfo = info.GetFiles("*.asset");
         foreach (FileInfo file in fileInfo)
         {

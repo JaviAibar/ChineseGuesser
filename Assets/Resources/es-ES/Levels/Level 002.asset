@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 2
+  m_Name: Level 002
   m_EditorClassIdentifier: 
   levelId: 2
-  levelName: Level 2
+  levelName: Nivel 2
   picture: {fileID: 21300000, guid: 180e5efd0b3343c46a757738bf4c0238, type: 3}
-  descrition: "Fire and Mountain\n\u706B\u5C71\nhu\u01D2 sh\u0101n"
-  solution: Volcano
+  description: "Fuego y Monta\xF1a\n\u706B\u5C71\nhu\u01D2 sh\u0101n"
+  solution: "Volc\xE1n"

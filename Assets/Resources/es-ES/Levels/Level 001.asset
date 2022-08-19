@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 001
   m_EditorClassIdentifier: 
   levelId: 1
-  levelName: Level 1
+  levelName: Nivel 1
   picture: {fileID: 21300000, guid: 438c13643d996c042903ef404c8bb59f, type: 3}
-  description: 
-  solution: Spark
+  description: "Fuego y Flor\n\u706B\u82B1\nhu\u01D2 hu\u0101"
+  solution: Chispa

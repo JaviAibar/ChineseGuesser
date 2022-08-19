@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 3
+  m_Name: Level 003
   m_EditorClassIdentifier: 
   levelId: 3
   levelName: Level 3
   picture: {fileID: 21300000, guid: 43ed1312decc8764783f0398c04a3cad, type: 3}
-  descrition: "Liver and Fire\n\u809D\u706B\ng\u0101n hu\u01D2"
+  description: "Liver and Fire\n\u809D\u706B\ng\u0101n hu\u01D2"
   solution: Anger
