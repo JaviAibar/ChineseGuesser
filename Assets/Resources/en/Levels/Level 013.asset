@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 013
   m_EditorClassIdentifier: 
   levelId: 13
-  levelName: Level 13
   picture: {fileID: 21300000, guid: 4608b46f43f65394a99c09734ee9c12f, type: 3}
-  description: a
+  description: "Wall and Tiger\n\u58C1\u864E\nb\xEC h\u01D4"
   solution: Lizard / Gecko

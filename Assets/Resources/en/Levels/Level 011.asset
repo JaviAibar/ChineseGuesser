@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 011
   m_EditorClassIdentifier: 
   levelId: 11
-  levelName: Level 11
   picture: {fileID: 21300000, guid: 1a2e037541e651947ac89a6144d0a9a2, type: 3}
-  description: a
+  description: "Electricity and Pool\n\u7535\u6C60\ndi\xE0n ch\xED"
   solution: Battery

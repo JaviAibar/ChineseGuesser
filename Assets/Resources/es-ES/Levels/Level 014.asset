@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 014
   m_EditorClassIdentifier: 
   levelId: 14
-  levelName: Level 14
   picture: {fileID: 21300000, guid: 91460854214362841840392108e1fd88, type: 3}
-  description: a
-  solution: Canine
+  description: "Tigre y Diente\n\u864E\u7259\nh\u01D4 y\xE1"
+  solution: Colmillo

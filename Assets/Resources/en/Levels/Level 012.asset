@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 012
   m_EditorClassIdentifier: 
   levelId: 12
-  levelName: Level 12
   picture: {fileID: 21300000, guid: 9a24ba6fa02a57b45a6b3f8b2bd26132, type: 3}
-  description: a
+  description: "Electricity and Word\n\u7535\u8BDD\ndi\xE0n hu\xE0"
   solution: Telephone

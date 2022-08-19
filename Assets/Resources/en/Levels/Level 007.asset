@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 007
   m_EditorClassIdentifier: 
   levelId: 7
-  levelName: Level 7
   picture: {fileID: 21300000, guid: 566281a5e9ceb7a4bb6d2f89e48c2d5e, type: 3}
-  description: a
+  description: "Earth and Bean\n\u571F\u8C46\nt\u01D4 d\xF2u"
   solution: Potato

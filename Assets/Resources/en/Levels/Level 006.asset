@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 006
   m_EditorClassIdentifier: 
   levelId: 6
-  levelName: Level 6
   picture: {fileID: 21300000, guid: 88dfb08c577d34c4f8eab6784a6afa81, type: 3}
-  description: a
+  description: "\rSticky and Earth\n\u9ECF\u571F\nni\xE1n t\u01D4"
   solution: Clay

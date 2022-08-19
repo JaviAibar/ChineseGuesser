@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 015
   m_EditorClassIdentifier: 
   levelId: 15
-  levelName: Level 15
   picture: {fileID: 21300000, guid: e84658c0e52f1e144aea170010e190e3, type: 3}
-  description: a
+  description: "Mountain and Chicken\n\u5C71\u9E21\nsh\u0101n j\u012B"
   solution: Pheasant

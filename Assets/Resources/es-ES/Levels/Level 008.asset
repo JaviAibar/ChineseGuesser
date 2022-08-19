@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 008
   m_EditorClassIdentifier: 
   levelId: 8
-  levelName: Level 8
   picture: {fileID: 21300000, guid: aaedf0b735d5f3c4c9107b9af98ba036, type: 3}
-  description: a
-  solution: Speak
+  description: "Salir y Boca\n\u51FA\u53E3\nch\u016B k\u01D2u"
+  solution: Hablar
