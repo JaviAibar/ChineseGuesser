@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Menus
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 9b8130745df2cc24db7f17f60419f470, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 5a21ca5f1a2f08647ada96f07a1e6a70, type: 2}
+  - {fileID: 11400000, guid: 2302cd86c1c906e439f24cb3bc404f21, type: 2}
+  - {fileID: 11400000, guid: 3a6958b6811534443bc3ad85e846a15d, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

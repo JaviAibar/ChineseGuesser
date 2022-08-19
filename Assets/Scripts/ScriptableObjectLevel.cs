@@ -9,7 +9,7 @@ public class ScriptableObjectLevel : ScriptableObject
     public string levelName;
     public Sprite picture;
     [MultilineAttribute]
-    public string descrition;
+    public string description;
     [MultilineAttribute]
     public string solution;
 }

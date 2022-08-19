@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class LevelMenuGenerator : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class LevelMenuGenerator : MonoBehaviour
     public GameObject levelButtonPrefab;
     private void Start()
     {
-        DirectoryInfo info = new DirectoryInfo("Assets/Resources/Levels");
+        DirectoryInfo info = new DirectoryInfo("Assets/Resources/en/Levels");
         var fileInfo = info.GetFiles("*.asset");
         foreach (FileInfo file in fileInfo)
         {

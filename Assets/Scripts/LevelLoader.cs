@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -25,8 +26,11 @@ public class LevelLoader : MonoBehaviour
     public void LoadLevel()
     {
         solution.transform.parent.gameObject.SetActive(false);
-        if (currentLevel == null) currentLevel = (ScriptableObjectLevel)Resources.Load("Levels/Level 1");
-        description.text = currentLevel.descrition;
+        print(LocalizationSettings.SelectedLocale.Formatter);
+        if (currentLevel == null) currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level 001");
+        print(currentLevel);
+        print(currentLevel.description);
+        description.text = currentLevel.description;
         picture.sprite = currentLevel.picture;
         title.text = currentLevel.levelName;
         solution.text = currentLevel.solution;
@@ -36,7 +40,7 @@ public class LevelLoader : MonoBehaviour
 
     public void NextLevel()
     {
-        currentLevel = (ScriptableObjectLevel)Resources.Load("Levels/Level " + (currentLevel.levelId + 1));
+        currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + (currentLevel.levelId + 1));
         LoadLevel();
     }
 

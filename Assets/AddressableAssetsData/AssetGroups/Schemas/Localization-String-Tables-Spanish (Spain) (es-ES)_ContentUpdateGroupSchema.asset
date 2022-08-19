@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 1
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Localization-String-Tables-Spanish (Spain) (es-ES)_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  levelId: 1
-  levelName: Level 1
-  picture: {fileID: 21300000, guid: 438c13643d996c042903ef404c8bb59f, type: 3}
-  descrition: "Fire and Bloom\n\u706B\u82B1\nhu\u01D2 hu\u0101"
-  solution: Spark
+  m_Group: {fileID: 11400000, guid: b631365967070ec49b76022f1ae389d4, type: 2}
+  m_StaticContent: 0

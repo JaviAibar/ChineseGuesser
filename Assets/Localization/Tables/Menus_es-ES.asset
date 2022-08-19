@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menus_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 9b8130745df2cc24db7f17f60419f470, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2059083816960
+    m_Localized: Niveles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2336004349952
+    m_Localized: Nueva partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2506188234752
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2875924520960
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3163926405120
+    m_Localized: Siguiente
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

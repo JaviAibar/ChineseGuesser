@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 16
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Localization-String-Tables-German (de)_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  levelId: 16
-  levelName: Level 16
-  picture: {fileID: 21300000, guid: d73e622822f0b0f43aeab409448030f6, type: 3}
-  descrition: "Lose and Foot\n\u5931\u8DB3\nsh\u012B z\xFA"
-  solution: Stumble
+  m_Group: {fileID: 11400000, guid: b4a33b68f25095347b275336c41d0ddf, type: 2}
+  m_StaticContent: 0

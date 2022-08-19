@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a8cbeb282e3a74f89efb51a2b5e8d3, type: 3}
-  m_Name: Level 16
+  m_Name: Level 016
   m_EditorClassIdentifier: 
   levelId: 16
   levelName: Level 16
   picture: {fileID: 21300000, guid: d73e622822f0b0f43aeab409448030f6, type: 3}
-  descrition: 
+  description: 
   solution: 
