@@ -43,6 +43,26 @@ MonoBehaviour:
     m_Key: Level
     m_Metadata:
       m_Items: []
+  - m_Id: 322200149532672
+    m_Key: Solve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325899156561920
+    m_Key: Disclaimer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327179857928192
+    m_Key: DisclaimerContent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328827112103936
+    m_Key: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 544257101635584
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

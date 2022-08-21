@@ -48,6 +48,28 @@ MonoBehaviour:
     m_Localized: Nivel
     m_Metadata:
       m_Items: []
+  - m_Id: 322200149532672
+    m_Localized: Resolver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325899156561920
+    m_Localized: Aviso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327179857928192
+    m_Localized: "Todas las definiciones utilizadas en este juego est\xE1n tomadas
+      de diccionarios. El autor no habla chino y, por lo tanto, no hay garant\xEDa
+      de que los t\xE9rminos sean correctos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328827112103936
+    m_Localized: Aceptar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 544257101635584
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

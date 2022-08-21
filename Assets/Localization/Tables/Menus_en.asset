@@ -48,6 +48,27 @@ MonoBehaviour:
     m_Localized: Level
     m_Metadata:
       m_Items: []
+  - m_Id: 322200149532672
+    m_Localized: Solve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325899156561920
+    m_Localized: Disclaimer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327179857928192
+    m_Localized: All the definitions used in this game are taken from dictionaries.
+      The author speaks no chinese and thus there is no guarantee the terms are correct.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328827112103936
+    m_Localized: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 544257101635584
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

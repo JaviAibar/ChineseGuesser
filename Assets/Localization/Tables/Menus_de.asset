@@ -48,6 +48,28 @@ MonoBehaviour:
     m_Localized: Level
     m_Metadata:
       m_Items: []
+  - m_Id: 322200149532672
+    m_Localized: "L\xF6sen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325899156561920
+    m_Localized: Haftungsausschluss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327179857928192
+    m_Localized: "Alle in diesem Spiel verwendeten Definitionen stammen aus W\xF6rterb\xFCchern.
+      Der Autor spricht kein chinesisch und somit gibt es keine Gew\xE4hr f\xFCr
+      die Richtigkeit der Begriffe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328827112103936
+    m_Localized: Akzeptieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 544257101635584
+    m_Localized: Abspann
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
