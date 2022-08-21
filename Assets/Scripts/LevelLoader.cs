@@ -13,8 +13,8 @@ public class LevelLoader : MonoBehaviour
     public Image mask;
     public Text description;
     public static int totalLevels;
-    // public Text title;
     public float timer;
+    public float ratioUnblur;
     public float speed;
     private Material blurImage;
     private Material blurMask;
@@ -38,6 +38,7 @@ public class LevelLoader : MonoBehaviour
         picture.sprite = currentLevel.picture;
         solution.text = currentLevel.solution;
         timer = 60;
+        ratioUnblur = 3;
         SetRadius();
     }
 
@@ -59,7 +60,7 @@ public class LevelLoader : MonoBehaviour
 
     public void CheckSolved()
     {
-        if (timer % 3 >= 0 && timer % 3 < 0.3)
+        if (timer % ratioUnblur >= 0 && timer % ratioUnblur < 0.3)
         {
             SetRadius();
         }
@@ -81,6 +82,7 @@ public class LevelLoader : MonoBehaviour
         timer -= Time.deltaTime * speed;
         if (timer <= 15)
         {
+            ratioUnblur = 0.01f;
             speed = 5;
         }
 

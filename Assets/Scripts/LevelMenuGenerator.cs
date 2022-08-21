@@ -20,7 +20,7 @@ public class LevelMenuGenerator : MonoBehaviour
         {
             var button = Instantiate(levelButtonPrefab, levelsGrid.transform);
             button.name = LocalizationSettings.StringDatabase.GetLocalizedString("Menus", "Level") + " " + (i + 1).ToString("D3");
-            button.GetComponentInChildren<Text>().text = button.name;
+            button.GetComponentInChildren<Text>().text = (i + 1).ToString("D3");
             button.GetComponent<Button>().onClick.AddListener(
                 delegate {
                     LevelLoader.currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + button.name.Split(" ")[1]); 
