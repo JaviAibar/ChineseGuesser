@@ -11,6 +11,8 @@ public class LevelLoader : MonoBehaviour
     public static ScriptableObjectLevel currentLevel;
     public Image picture;
     public Image mask;
+    public Image checkSolved;
+    private Sprite[] checkSprites;
     public Text description;
     public static int totalLevels;
     public float timer;
@@ -24,6 +26,7 @@ public class LevelLoader : MonoBehaviour
     private void Awake()
     {
         CheckLevelNull();
+        checkSprites = Resources.LoadAll<Sprite>("Icons/right-wrong-icon");
         totalLevels = Resources.LoadAll<ScriptableObjectLevel>(LocalizationSettings.SelectedLocale.Formatter + "/Levels").Length;
     }
     void Start()
@@ -40,6 +43,7 @@ public class LevelLoader : MonoBehaviour
         timer = 60;
         ratioUnblur = 3;
         SetRadius();
+        SetCheckSolved();
     }
 
     public void NextLevel()
@@ -119,5 +123,33 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("Levels");
 
         return;
+    }
+
+    public void Guessed()
+    {
+        PlayerPrefs.SetInt(currentLevel.levelId.ToString("D3"), 2);
+        NextLevel();
+    }
+
+    public void NotGuessed()
+    {
+        PlayerPrefs.SetInt(currentLevel.levelId.ToString("D3"), 1);
+        NextLevel();
+    }
+
+    public void SetCheckSolved()
+    {
+        int solved = PlayerPrefs.GetInt(currentLevel.levelId.ToString("D3"), 0);
+        print(solved);
+        switch (solved)
+        {
+            case 0:
+                checkSolved.gameObject.SetActive(false);
+                break;
+            case 1: case 2:
+                checkSolved.gameObject.SetActive(true);
+                checkSolved.sprite = checkSprites[solved - 1];
+                break;
+        }
     }
 }

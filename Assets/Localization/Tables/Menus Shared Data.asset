@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: Credits
     m_Metadata:
       m_Items: []
+  - m_Id: 1310493007781888
+    m_Key: NotGuessed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1311149324083200
+    m_Key: Guessed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1344011683340288
+    m_Key: CountSolved
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

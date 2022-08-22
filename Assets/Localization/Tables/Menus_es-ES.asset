@@ -70,10 +70,23 @@ MonoBehaviour:
     m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
+  - m_Id: 1310493007781888
+    m_Localized: Ni idea...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1311149324083200
+    m_Localized: "\xA1Lo sab\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1344011683340288
+    m_Localized: Has resuelto por ahora  de {levelGen.totalLevels}
+    m_Metadata:
+      m_Items:
+      - rid: 3338760960540672003
   references:
     version: 2
     RefIds:
     - rid: 3338760960540672003
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00a0b58fdbcd0000
+        m_Entries: 00a0b58fdbcd000000a0f51a5fc60400

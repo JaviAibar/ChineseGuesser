@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 1.1.0
   preloadedAssets:
   - {fileID: 11400000, guid: cea669a890c42ad4f85d46e4a102b28a, type: 2}
   metroInputSource: 0
@@ -158,6 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.javigames.chineseguesser
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Standalone: 0

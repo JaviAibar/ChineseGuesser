@@ -69,6 +69,18 @@ MonoBehaviour:
     m_Localized: Credits
     m_Metadata:
       m_Items: []
+  - m_Id: 1310493007781888
+    m_Localized: I had no clue...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1311149324083200
+    m_Localized: I knew it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1344011683340288
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
