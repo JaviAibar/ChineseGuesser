@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Components;
 
 public class LevelMenuGenerator : MonoBehaviour
 {
@@ -11,40 +12,49 @@ public class LevelMenuGenerator : MonoBehaviour
     public LocalizedStringTable table;
     private Sprite[] checkSprites;
     public int totalLevels;
+    public int totalLevelsSolved;
+    public LocalizeStringEvent levelsSolvedText;
+
     private void Awake()
     {
-        totalLevels = LevelLoader.totalLevels;
-
+        totalLevelsSolved = 0;
     }
+
     void Start()
     {
         checkSprites = Resources.LoadAll<Sprite>("Icons/right-wrong-icon");
-        if (LevelLoader.totalLevels == 0)
-        {
-            LevelLoader.totalLevels = Resources.LoadAll<ScriptableObjectLevel>(LocalizationSettings.SelectedLocale.Formatter + "/Levels").Length;
+        totalLevels = LevelLoader.TotalLevels;
 
+        for (int i = 0; i < totalLevels; i++)
+        {
+            InstantiateButton((i + 1).ToString("D3"));
         }
-        for (int i = 0; i < LevelLoader.totalLevels; i++)
-        {
-            var button = Instantiate(levelButtonPrefab, levelsGrid.transform);
-            button.name = LocalizationSettings.StringDatabase.GetLocalizedString("Menus", "Level") + " " + (i + 1).ToString("D3");
-            button.GetComponentInChildren<Text>().text = (i + 1).ToString("D3");
-            ScriptableObjectLevel level = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level " + (i + 1).ToString("D3"));
-            Image checkedImage = button.transform.GetChild(1).GetComponent<Image>();
-            int solved = PlayerPrefs.GetInt((i + 1).ToString("D3"), 0);
+        levelsSolvedText.RefreshString();
+    }
 
-            if (solved == 0) {
-                checkedImage.gameObject.SetActive(false);
-            } else {
-                checkedImage.sprite = checkSprites[solved - 1];
-            }
+    public void InstantiateButton(string levelId)
+    {
+        var button = Instantiate(levelButtonPrefab, levelsGrid.transform);
+        button.name = LocalizationSettings.StringDatabase.GetLocalizedString("Menus", "Level") + " " + levelId;
+        button.GetComponentInChildren<TMPro.TMP_Text>().text = levelId;
 
-            button.GetComponent<Button>().onClick.AddListener(
-                delegate {
-                    LevelLoader.currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter+"/Levels/Level " + button.name.Split(" ")[1]); 
-                    SceneManager.LoadScene("Level"); 
+        ScriptableObjectLevel level = LevelLoader.GetLevel(levelId);
+
+        int solved = PlayerPrefs.GetInt(levelId, 0);
+        totalLevelsSolved += solved == 2 ? 1 : 0;
+
+        Image checkedImage = button.transform.GetChild(0).GetComponent<Image>();
+        // if level already played, set the corresponding sprite, otherwise, disable Image
+        if (solved == 0)
+            checkedImage.gameObject.SetActive(false);
+        else
+            checkedImage.sprite = checkSprites[solved - 1];
+
+        button.GetComponent<Button>().onClick.AddListener(
+            delegate {
+                LevelLoader.LoadLevel("Level "+button.name.Split(" ")[1]);
+                GoLevel();
             });
-        }
     }
 
     private void Update()
@@ -53,17 +63,27 @@ public class LevelMenuGenerator : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                SceneManager.LoadScene("MainMenu");
+                GoMainMenu();
 
                 return;
             }
         }
     }
 
+    public void GoLevel()
+    {
+        SceneManager.LoadScene("Level");
+    }
+ 
     public void GoBack()
     {
-        SceneManager.LoadScene("MainMenu");
+        GoMainMenu();
 
         return;
+    }
+
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

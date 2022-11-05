@@ -78,10 +78,32 @@ MonoBehaviour:
     m_Localized: Ich wusste es!
     m_Metadata:
       m_Items: []
+  - m_Id: 1344011683340288
+    m_Localized: Du hast bislang {levelGen.totalLevelsSolved} Levels von {levelGen.totalLevels}
+      erledigt.
+    m_Metadata:
+      m_Items:
+      - rid: 3338760960540672002
+  - m_Id: 28081312524587008
+    m_Localized: Fortsetzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28164720466513920
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28165872134311936
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28164874036760576
+    m_Localized: Deutsch
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 3338760960540672002
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00a0b58fdbcd0000
+        m_Entries: 00a0b58fdbcd000000a0f51a5fc60400

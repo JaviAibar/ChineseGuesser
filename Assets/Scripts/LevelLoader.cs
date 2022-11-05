@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,30 +12,45 @@ public class LevelLoader : MonoBehaviour
     public static ScriptableObjectLevel currentLevel;
     public Image picture;
     public Image mask;
+    public static LevelLoader instance;
     public Image checkSolved;
     private Sprite[] checkSprites;
     public Text description;
-    public static int totalLevels;
+    private static int totalLevels;
+    public static int TotalLevels { get { totalLevels = Resources.LoadAll<ScriptableObjectLevel>(LocalizationSettings.SelectedLocale.Formatter + "/Levels").Length; return totalLevels; } }
+
     public float timer;
     public float ratioUnblur;
     public float speed;
-    private Material blurImage;
-    private Material blurMask;
+    /*private Material blurImage;
+    private Material blurMask;*/
     public Text solution;
     public GameObject solveButton;
+    public GameObject nextButtons;
     public LocalizeStringEvent title;
     private void Awake()
     {
+        if (!instance)
+            instance = this;
+        totalLevels = TotalLevels;
         CheckLevelNull();
         checkSprites = Resources.LoadAll<Sprite>("Icons/right-wrong-icon");
-        totalLevels = Resources.LoadAll<ScriptableObjectLevel>(LocalizationSettings.SelectedLocale.Formatter + "/Levels").Length;
     }
     void Start()
     {
-        LoadLevel();
+        InitLevel();
     }
 
-    public void LoadLevel()
+    internal static void LoadLevel(int levelId)
+    {
+        currentLevel = GetLevel(levelId);
+    }
+
+    internal static void LoadLevel(string levelId)
+    {
+        currentLevel = GetLevel(levelId);
+    }
+    public void InitLevel()
     {
         solution.transform.parent.gameObject.SetActive(false);
         description.text = currentLevel.description;
@@ -44,22 +60,30 @@ public class LevelLoader : MonoBehaviour
         ratioUnblur = 3;
         SetRadius();
         SetCheckSolved();
+        solveButton.SetActive(true);
+        nextButtons.SetActive(false);
     }
 
     public void NextLevel()
     {
+        PlayerPrefs.SetInt("LastLevelPlayed", currentLevel.levelId);
         CheckLevelNull();
-        if (currentLevel.levelId + 1 <= totalLevels) {
-            currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level " + (currentLevel.levelId + 1).ToString("D3"));
-        } else
+        if (currentLevel.levelId + 1 <= totalLevels)
+        {
+            currentLevel = GetLevel(currentLevel.levelId + 1);
+        }
+        else
         {
             GoLevels();
             return;
         }
         title.StringReference.RefreshString();
-        LoadLevel();
+        InitLevel();
         speed = 3;
-        solveButton.SetActive(true);
+    }
+
+    public void GoMainMenu() {
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void CheckSolved()
@@ -72,6 +96,7 @@ public class LevelLoader : MonoBehaviour
         {
             solution.transform.parent.gameObject.SetActive(true);
             solveButton.SetActive(false);
+            nextButtons.SetActive(true);
         }
     }
 
@@ -92,8 +117,7 @@ public class LevelLoader : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape) && Application.platform == RuntimePlatform.Android)
         {
-            SceneManager.LoadScene("MainMenu");
-
+            GoMainMenu();
             return;
         }
 
@@ -108,12 +132,16 @@ public class LevelLoader : MonoBehaviour
     // Only to be safe something ever loads
     void CheckLevelNull()
     {
-        if (currentLevel == null) currentLevel = (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/Level 001");
+        if (currentLevel == null)
+        {
+            Debug.LogWarning("Level was not loaded, then loading level 1");
+            currentLevel = GetLevel(1);
+        }
     }
 
     public void GoBack()
     {
-        SceneManager.LoadScene("MainMenu");
+        GoMainMenu();
 
         return;
     }
@@ -127,29 +155,49 @@ public class LevelLoader : MonoBehaviour
 
     public void Guessed()
     {
-        PlayerPrefs.SetInt(currentLevel.levelId.ToString("D3"), 2);
-        NextLevel();
+        LevelResolution(2);
     }
 
     public void NotGuessed()
     {
-        PlayerPrefs.SetInt(currentLevel.levelId.ToString("D3"), 1);
+        LevelResolution(1);
+    }
+
+    public void LevelResolution(int result)
+    {
+        PlayerPrefs.SetInt(currentLevel.levelId.ToString("D3"), result);
         NextLevel();
     }
 
     public void SetCheckSolved()
     {
         int solved = PlayerPrefs.GetInt(currentLevel.levelId.ToString("D3"), 0);
-        print(solved);
-        switch (solved)
+        if (solved == 0)
+            checkSolved.gameObject.SetActive(false);
+        else
         {
-            case 0:
-                checkSolved.gameObject.SetActive(false);
-                break;
-            case 1: case 2:
-                checkSolved.gameObject.SetActive(true);
-                checkSolved.sprite = checkSprites[solved - 1];
-                break;
+            checkSolved.gameObject.SetActive(true);
+            checkSolved.sprite = checkSprites[solved - 1];
         }
     }
+
+    public static void ResetGame()
+    {
+        for (int i = 1; i <= TotalLevels; i++)
+        {
+            PlayerPrefs.SetInt(i.ToString("D3"), 0);
+        }
+        PlayerPrefs.SetInt("LastLevelPlayed", -1);
+    }
+
+    public static ScriptableObjectLevel GetLevel(int levelId)
+    {
+        return GetLevel("Level " + levelId.ToString("D3"));
+    }
+    public static ScriptableObjectLevel GetLevel(string levelId)
+    {
+        return (ScriptableObjectLevel)Resources.Load(LocalizationSettings.SelectedLocale.Formatter + "/Levels/" + levelId);
+    }
+
+
 }

@@ -79,10 +79,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1344011683340288
-    m_Localized: Has resuelto por ahora  de {levelGen.totalLevels}
+    m_Localized: Has resuelto por ahora {levelGen.totalLevelsSolved} de {levelGen.totalLevels}
     m_Metadata:
       m_Items:
       - rid: 3338760960540672003
+  - m_Id: 28081312524587008
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28164720466513920
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28165872134311936
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28164874036760576
+    m_Localized: Deutsch
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
